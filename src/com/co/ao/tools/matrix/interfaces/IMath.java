@@ -1,6 +1,6 @@
 package com.co.ao.tools.matrix.interfaces;
 
-import com.co.ao.datastructure.matrix.IMatrix;
+import com.co.ao.datastructure.matrix.Interface.IMatrix;
 
 public interface IMath<T> {
 

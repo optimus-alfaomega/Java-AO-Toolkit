@@ -1,4 +1,4 @@
-package com.co.ao.datastructure.matrix;
+package com.co.ao.datastructure.matrix.Interface;
 
 public interface Irow<T> {
 

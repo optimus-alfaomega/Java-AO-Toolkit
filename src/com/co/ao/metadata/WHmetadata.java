@@ -1,25 +1,26 @@
 package com.co.ao.metadata;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
-public class Aometadata<T> {
+public class WHmetadata<T> {
 
     private T reference = null;
 
-    public Aometadata() {
+    public WHmetadata() {
 
     }
 
-    public Aometadata<T> configuration(T reference) {
+    public WHmetadata<T> configuration(T reference) {
         this.reference = reference;
         return this;
     }
 
-    public Aometadata<T> configuration() {
+    public WHmetadata<T> configuration() {
         return this;
     }
 
-    public Aometadata<T> Methods() {
+    public WHmetadata<T> Methods() {
         if (this.reference != null) {
             for (int index = 0; index < this.reference.getClass().getMethods().length; index++) {
                 System.out.println(this.reference.getClass().getMethods()[index]);
@@ -30,21 +31,27 @@ public class Aometadata<T> {
         return this;
     }
 
-    public Aometadata<T> Command(String name, Object[] args, Class<?>... parameterTypes) {
+    public Object Command(String name, Object[] args, Class<?>... parameterTypes) {
+        Object output = null;
         if (this.reference != null) {
 
             try {
-                this.reference.getClass().getMethod(name, parameterTypes).invoke(null, args);
+
+                // this.reference.getClass().getMethod(name,
+                // parameterTypes).invoke(this.reference, args);
+                output = this.reference.getClass().getMethod(name, parameterTypes).invoke(this.reference, args);
+
             } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
                     | NoSuchMethodException
                     | SecurityException e) {
                 e.printStackTrace();
             }
+
         }
-        return this;
+        return output;
     }
 
-    public Aometadata<T> packageName() {
+    public WHmetadata<T> packageName() {
         if (this.reference == null) {
             System.out.println("reference is null");
         } else
@@ -52,7 +59,7 @@ public class Aometadata<T> {
         return this;
     }
 
-    public Aometadata<T> isInterface() {
+    public WHmetadata<T> isInterface() {
         if (this.reference == null) {
             System.out.println("reference is null");
         } else
@@ -67,7 +74,7 @@ public class Aometadata<T> {
         return valor;
     }
 
-    public Aometadata<T> className() {
+    public WHmetadata<T> className() {
 
         if (this.reference == null) {
             System.out.println("reference is null");

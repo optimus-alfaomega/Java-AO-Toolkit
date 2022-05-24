@@ -18,7 +18,7 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        Aometadata<Demo> metadata = new Aometadata<Demo>();
+        WHmetadata<Demo> metadata = new WHmetadata<Demo>();
         metadata.configuration(new Demo());
         Object atributos[] = new Object[1];
         atributos[0] = 5;

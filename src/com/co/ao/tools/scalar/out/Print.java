@@ -1,4 +1,4 @@
-package com.co.ao.tools.math.scalar;
+package com.co.ao.tools.scalar.out;
 
 public class Print {
 

@@ -1,8 +1,9 @@
-package com.co.ao.datastructure.matrix;
+package com.co.ao.datastructure.matrix.excel;
 
-import com.co.ao.metadata.Aometadata;
+import com.co.ao.datastructure.matrix.Interface.Irow;
+import com.co.ao.metadata.WHmetadata;
 
-public class Row<T> extends Aometadata<Row> implements Irow {
+public class Row<T> extends WHmetadata<Row> implements Irow {
 
     private String column;
     private int row;

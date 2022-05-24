@@ -1,10 +1,8 @@
 package com.co.ao.tools.matrix.interfaces;
 
-import com.co.ao.datastructure.matrix.IMatrix;
+import com.co.ao.datastructure.matrix.Interface.IMatrix;
 
 public interface IAnalisis<T> {
-
-    public int addition(T... args);
 
     public int averageColumn(IMatrix<T> matrix, int fromColumn, int toColumn);
 

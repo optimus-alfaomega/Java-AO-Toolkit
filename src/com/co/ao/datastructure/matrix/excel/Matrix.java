@@ -1,8 +1,10 @@
-package com.co.ao.datastructure.matrix;
+package com.co.ao.datastructure.matrix.excel;
 
-import com.co.ao.metadata.Aometadata;
+import com.co.ao.datastructure.matrix.Interface.IMatrix;
+import com.co.ao.datastructure.matrix.Interface.Irow;
+import com.co.ao.metadata.WHmetadata;
 
-public class Matrix<T> extends Aometadata<Matrix> implements IMatrix {
+public class Matrix<T> extends WHmetadata<Matrix> implements IMatrix {
 
     private final int TOTAL_CHARACTERS = 26;
     private final int MAX_PAIR_ALTERNATIVES = TOTAL_CHARACTERS * TOTAL_CHARACTERS;
